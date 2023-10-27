@@ -74,6 +74,9 @@
                                 labels: [@Html.Raw(String.Join(", ", Model.AverageDailyStorageByRepo.Select(m => $"'{m.Key}'")))]
                             },
                             options: {
+                                legend: {
+                                    display: false,
+                                },
                                 tooltips: {
                                     enabled: true,
                                     callbacks: {
@@ -111,13 +114,18 @@
                             data: allData,
                             
                             options: {
+                                legend: {
+                                    display: false,
+                                },
                                 scales: {
+                                    
                                     x: {
                                         type: "time",
                                         display: true,
                                         time: { unit: "day" }
                                     },
                                     y: {
+                                  
                                         title: { display: true, text: "Storage"},
                                         ticks: {
                                             callback: function(val, index) {
@@ -137,7 +145,8 @@
                                         }
                                     }
 
-                                }
+                                },
+                                
                             }
                         });
                 </script>

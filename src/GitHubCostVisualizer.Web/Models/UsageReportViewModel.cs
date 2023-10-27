@@ -36,5 +36,6 @@ namespace GitHubCostVisualizer.Web.Models
         public List<KeyValuePair<string, decimal>> AverageDailyStorageByRepo { get; set; }
 
         public DailyStorageData DailyStorageByRepo { get; set; }
+        public DailyStorageData MonthlyActionByRepo { get; set; }
     }
 }
